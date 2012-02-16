@@ -1,0 +1,1 @@
+SELECT * FROM scm.champion_eiep1 where   fixedvariable = 'V' and units = '0' order by reportmonth

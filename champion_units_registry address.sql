@@ -1,0 +1,2 @@
+select units, reportmonth, addressnumber, addressstreet, addresstown, addressregion FROM scm.champion_eiep1
+inner join champion_registry on champion_registry.icp = champion_eiep1.icp where champion_eiep1.icp = '0000808802WAC73' order by reportmonth

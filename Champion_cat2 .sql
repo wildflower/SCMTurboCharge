@@ -1,0 +1,1 @@
+select * from scm.champion_registry where category = 2 and icpstatus = 2

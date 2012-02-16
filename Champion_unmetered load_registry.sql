@@ -1,0 +1,1 @@
+SELECT * FROM scm.champion_registry where dailyunmeteredkwh != '' or unmeteredretailer != '';

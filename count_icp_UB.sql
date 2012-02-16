@@ -1,0 +1,1 @@
+SELECT count(icp) as count, icp FROM scm.champion_eiep1 where status = 'UB' group by icp order by count desc;
