@@ -1,4 +1,4 @@
- select sunrise_registry.icp, units, pricecode, pricerate
+ select sunrise_registry.icp, units, pricecode, pricerate, distpricecat
  from scm.sunrise_eiep1  
  INNER JOIN scm.sunrise_registry on scm.sunrise_registry.icp = scm.sunrise_eiep1.icp 
  where  pricecode = 'HET012'

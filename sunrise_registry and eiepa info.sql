@@ -6,6 +6,7 @@ SELECT
     addresstown,    
     icpstatus,
     category,
+    distpricecat,
     sunrise_eiep1.reportmonth,
     sunrise_eiep1.units,    
     sunrise_eiep1.status,
