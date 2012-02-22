@@ -22,9 +22,10 @@ FROM
 inner join sunrise_eiep1 on sunrise_registry.icp = sunrise_eiep1.icp
 where     
 sunrise_eiep1.fixedvariable = 'V'
-and sunrise_eiep1.icp = '1000000013BP252'
+and category = '2'
+and reportmonth > '201001'
 
-order by reportmonth desc
+order by icp
  
  
   
