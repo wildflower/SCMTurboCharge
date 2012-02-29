@@ -1,0 +1,1 @@
+select icp, units from sunrise_eiep1 where reportmonth = '201109' and units = 0 and fixedvariable ='V' and  icp in (SELECT icp FROM scm.sunrise_eiep1 where status = 'RD' and units = 0 and reportmonth = 201112 and fixedvariable = 'V')

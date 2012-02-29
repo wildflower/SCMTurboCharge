@@ -1,0 +1,1 @@
+select sunrise_registry.icp,  avg(units) as `Units` from sunrise_eiep1 inner join sunrise_registry on sunrise_registry.icp = sunrise_eiep1.icp where sunrise_registry.icpstatus = 2  and fixedvariable = "V" group by icp order by Units 
