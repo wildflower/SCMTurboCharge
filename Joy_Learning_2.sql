@@ -1,0 +1,1 @@
+create table joy; insert into joy using select icp from residential billed as com
