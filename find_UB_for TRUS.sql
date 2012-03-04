@@ -1,0 +1,3 @@
+create temporary table ub (icp char(15), status char(2), reportmonth char(6), retailer char(4));
+insert into ub select icp , status , reportmonth, retailer from champion_eiep1 where status = 'UB' order by icp;
+explain select champion_eiep1.icp , champion_eiep1.status, champion_eiep1.reportmonth,  champion_eiep1.retailer from  champion_eiep1  inner join ub on champion_eiep1.reportmonth = ub.reportmonth and champion_eiep1.icp = ub.icp order by champion_eiep1.reportmonth DESC, champion_eiep1.icp
