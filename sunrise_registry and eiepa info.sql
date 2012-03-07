@@ -7,8 +7,8 @@ SELECT
 FROM    scm.sunrise_registry
 inner join sunrise_eiep1 on sunrise_registry.icp = sunrise_eiep1.icp    
    
-where  sunrise_registry.icp = '1000009696BP0F1'
-  order by reportmonth desc
+where  sunrise_registry.icp = '1000000016BPF1D'
+order by reportmonth desc
 
  
   

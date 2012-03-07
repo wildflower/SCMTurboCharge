@@ -13,6 +13,7 @@ SELECT
     metercontact,
     distpricecat,
     champion_eiep1.pricecode,
+    champion_eiep1.fixedvariable,
     champion_eiep1.pricerate,
     champion_eiep1.charge
 FROM

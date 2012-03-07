@@ -27,9 +27,9 @@ FROM
     scm.sunrise_registry
 inner join sunrise_eiep1 on sunrise_registry.icp = sunrise_eiep1.icp
 where  
-  (distpricecat = 'N4U'
- or distpricecat = 'N4R')
- and    sunrise_eiep1.reportmonth = '201111'
+  (distpricecat = 'N1U'
+ or distpricecat = 'N1R')
+ and    sunrise_eiep1.reportmonth > '201110'
 order by icp 
 
   
