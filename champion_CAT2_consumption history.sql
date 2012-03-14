@@ -16,16 +16,7 @@ sum(units*(1-abs(sign(left(reportmonth,4)-2012)))) as 'sum 12',
     (sum(units*(1-abs(sign(left(reportmonth,4)-2011))))-sum(units*(1-abs(sign(left(reportmonth,4)-2012)))))/sum(units*(1-abs(sign(left(reportmonth,4)-2012))))*100 as '2011',
     (sum(units*(1-abs(sign(left(reportmonth,4)-2006))))-sum(units*(1-abs(sign(left(reportmonth,4)-2011)))))/sum(units*(1-abs(sign(left(reportmonth,4)-2011))))*100 as 'tot var',
  
-    addressuserref,
-    addressnumber,
-    addressstreet,
-    addresstown,    
-    icpstatus,
-    category,
-    metertypehhr,
-    ami,
-    meterregister,
-    distpricecat
+   champion_registry.retailer,distpricecat, addressuserref,    addressnumber,    addressstreet,    addresstown,        icpstatus,    category,    metertypehhr,    ami,    meterregister,    distpricecat
 
 
 from
