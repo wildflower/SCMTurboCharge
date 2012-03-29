@@ -11,6 +11,7 @@ SELECT
     sunrise_eiep1.charge,
     sunrise_eiep1.fixedvariable,
     distpricecat,
+    sunrise_registry.retailer as  ' Reg retailer',   
     reference,
     chargeablecapacity,
     addressuserref,
@@ -27,7 +28,13 @@ FROM
         inner join
     sunrise_eiep1 ON sunrise_registry.icp = sunrise_eiep1.icp
 where
-    (distpricecat = 'NMDR' or distpricecat = 'NMDU') and sunrise_eiep1.reportmonth = '201201'
+    (distpricecat = 'LUDU'
+    or distpricecat = 'LUDR'
+    or distpricecat = 'SDU'
+    or distpricecat = 'SDR'
+    or distpricecat = 'NSDU'
+    or distpricecat = 'NSDR'  ) 
+     and sunrise_eiep1.reportmonth = '201201'
 order by icp 
 
   

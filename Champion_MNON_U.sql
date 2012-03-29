@@ -5,10 +5,9 @@ SELECT
 FROM     scm.champion_registry
 inner join     champion_eiep1 ON champion_registry.icp = champion_eiep1.icp
 where metercontact = 'MNON'
-AND STATUS = 'UB'
+ 
 AND REPORTMONTH = '201112'     
 order by champion_registry.icp desc
-  
    
   
 

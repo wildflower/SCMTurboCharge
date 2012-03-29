@@ -1,5 +1,5 @@
 select 
-    sunrise_registry.icp,
+    champion_registry.icp,lat,lng,
     (sum(units*(1-abs(sign(reportmonth-201001))))-sum(units*(1-abs(sign(reportmonth-201002)))))/sum(units*(1-abs(sign(reportmonth-201002))))*100 as '201001',
     (sum(units*(1-abs(sign(reportmonth-201002))))-sum(units*(1-abs(sign(reportmonth-201003)))))/sum(units*(1-abs(sign(reportmonth-201003))))*100 as '201002',
     (sum(units*(1-abs(sign(reportmonth-201003))))-sum(units*(1-abs(sign(reportmonth-201004)))))/sum(units*(1-abs(sign(reportmonth-201004))))*100 as '201003',
@@ -24,7 +24,7 @@ select
     (sum(units*(1-abs(sign(reportmonth-201110))))-sum(units*(1-abs(sign(reportmonth-201111)))))/sum(units*(1-abs(sign(reportmonth-201111))))*100 as '201110',
     (sum(units*(1-abs(sign(reportmonth-201111))))-sum(units*(1-abs(sign(reportmonth-201112)))))/sum(units*(1-abs(sign(reportmonth-201112))))*100 as '201111'
 from
-    sunrise_eiep1
-    inner join sunrise_registry on  sunrise_registry.icp = sunrise_eiep1.icp
-    where sunrise_registry.category = 2
+    champion_eiep1
+    inner join champion_registry on  champion_registry.icp = champion_eiep1.icp
+    where champion_registry.category = 2
     group by icp;

@@ -1,0 +1,1 @@
+select distinct concat('sum(if(strcmp(status,\'RD\'),0,units) * (1 - abs(sign(reportmonth - ',reportmonth,')))) as \'',reportmonth,'\',') from sunrise_eiep1 order by reportmonth

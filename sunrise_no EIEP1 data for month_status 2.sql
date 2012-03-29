@@ -2,34 +2,34 @@
  
 select 
     tmp_reg.icp, 
-    champion_registry.retailer,
+    sunrise_registry.retailer,
     icpcreationdate,
     icpcommisiondate,    
     eventstart,
-    eventend, 
-    icpstatusreason,
+    eventend,     
     addressuserref, 
     addressnumber,
     addressstreet,
-    addresstown,
-    icpstatus,
+    addresstown,   
     metertypenhh,
     metertypehhr,
     distpricecat,
     category
+    icpstatus,
+    icpstatusreason
 from
     (select 
-        champion_registry.icp
+        sunrise_registry.icp
     from
-        champion_registry
+        sunrise_registry
     where
-        champion_registry.icpstatus = 2 and champion_registry.metertypenhh = 'Y' ) as tmp_reg
+        sunrise_registry.icpstatus = 2 and sunrise_registry.metertypenhh = 'Y' ) as tmp_reg
         left join
     (select 
-        champion_eiep1.icp
+        sunrise_eiep1.icp
     from
-        champion_eiep1
+        sunrise_eiep1
     where
-        reportmonth = 201201) as tmp_eiep1 ON tmp_reg.icp = tmp_eiep1.icp inner join  champion_registry  on tmp_reg.icp = champion_registry.icp
+        reportmonth = 201112) as tmp_eiep1 ON tmp_reg.icp = tmp_eiep1.icp inner join  sunrise_registry  on tmp_reg.icp = sunrise_registry.icp
 where
     tmp_eiep1.icp is NULL

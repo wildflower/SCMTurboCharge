@@ -6,17 +6,17 @@ select
     icpcreationdate,
     icpcommisiondate,    
     eventstart,
-    eventend, 
-    icpstatusreason,
+    eventend,     
     addressuserref, 
     addressnumber,
     addressstreet,
-    addresstown,
-    icpstatus,
+    addresstown,   
     metertypenhh,
     metertypehhr,
     distpricecat,
     category
+    icpstatus,
+    icpstatusreason
 from
     (select 
         champion_registry.icp
@@ -30,6 +30,6 @@ from
     from
         champion_eiep1
     where
-        reportmonth = 201201) as tmp_eiep1 ON tmp_reg.icp = tmp_eiep1.icp inner join  champion_registry  on tmp_reg.icp = champion_registry.icp
+        reportmonth = 201202) as tmp_eiep1 ON tmp_reg.icp = tmp_eiep1.icp inner join  champion_registry  on tmp_reg.icp = champion_registry.icp
 where
     tmp_eiep1.icp is NULL

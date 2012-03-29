@@ -1,5 +1,5 @@
-SELECT 
-    champion_registry.icp,
+select 
+ champion_registry.icp,
     champion_eiep1.reportmonth,
     champion_eiep1.units,
     champion_eiep1.status,
@@ -11,18 +11,29 @@ SELECT
     champion_eiep1.charge,
     champion_eiep1.chargeabledays,
     champion_registry.retailer,
+    icpstatus,
+    icpcreationdate,
+    icpcommisiondate,    
+    eventstart,
+    eventend,    
     addressuserref, 
     addressnumber,
     addressstreet,
     addresstown,
-    icpstatus,
     metertypenhh,
+    metertypehhr,
     distpricecat,
     category
+
 FROM
     scm.champion_registry
-        inner join
+        left join
     champion_eiep1 ON champion_registry.icp = champion_eiep1.icp
-where
-    (reportmonth > '201108') and (pricecode = 'WA07' or pricecode = 'WA06' or pricecode = 'WA026' or pricecode = 'WA027')
-order by icp
+where champion_registry.icpstatus = '0'  or champion_registry.icpstatus = '999'  
+and champion_eiep1.reportmonth is null
+
+ 
+ 
+
+ 
+order by champion_registry.icp
