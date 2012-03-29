@@ -31,5 +31,5 @@ sum(units*(1-abs(sign(left(reportmonth,4)-2012)))) as 'sum 12',
 from
     champion_eiep1 inner join champion_registry on champion_registry.icp = champion_eiep1.icp
 where
-    fixedvariable = 'V' and champion_registry.category = 1 group by  icp
+    fixedvariable = 'V' and champion_registry.category = 2 group by  icp
  
