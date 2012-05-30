@@ -5,45 +5,13 @@ SELECT
      addressstreet,    addresstown, reference ,addressuserref,   icpstatus,    category,    metertypehhr,    ami,
     meterregister
 FROM
-    scm.sunrise_registry
-        inner join
-    sunrise_eiep1 ON sunrise_registry.icp = sunrise_eiep1.icp
-    where  sunrise_eiep1.icp ='1000001048BP52E'
+    scm.sunrise_registry         inner join     sunrise_eiep1 ON sunrise_registry.icp = sunrise_eiep1.icp
+    where   sunrise_eiep1.status in  (  'UB', 'FL')
+      
+    and sunrise_eiep1.reportmonth >'201112'
+     
+    and category = '1'
+    and icpstatus = '2'
+    and sunrise_registry.retailer = 'BOPE'
+
     order by sunrise_eiep1.reportmonth desc
-
-    
-
-
-
-
-
-
-
-
-
-  
-
-    
-     
-     
-
- 
-    
-     
-    
- 
-
- 
-  
-  
-    
-
-
-
-
-
-
-
- 
- 
- 

@@ -7,8 +7,10 @@ FROM
     scm.champion_registry
         inner join
     champion_eiep1 ON champion_registry.icp = champion_eiep1.icp
-    where  champion_registry.icp=  '0000123922WA112'
-
+    where   
+ 
+  champion_eiep1.units> '15000'
+  and reportmonth > '201101'
 
     order by champion_eiep1.reportmonth desc
     

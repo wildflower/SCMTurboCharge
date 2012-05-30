@@ -82,4 +82,4 @@
   (sum( kwh*(1-abs(sign(reportmonth-201110))))-sum( kwh*(1-abs(sign(reportmonth-201111)))))/sum( kwh*(1-abs(sign(reportmonth-201111))))*100 as '201110'    ,                                                         
   (sum( kwh*(1-abs(sign(reportmonth-201111))))-sum( kwh*(1-abs(sign(reportmonth-201112)))))/sum( kwh*(1-abs(sign(reportmonth-201112))))*100 as '201111'    ,                                                         
   (sum( kwh*(1-abs(sign(reportmonth-201112))))-sum( kwh*(1-abs(sign(reportmonth-201113)))))/sum( kwh*(1-abs(sign(reportmonth-201113))))*100 as '201112'    
-from champion_eiep3 group by icp
+from sunrise_eiep3 group by icp

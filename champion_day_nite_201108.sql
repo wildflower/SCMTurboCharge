@@ -24,5 +24,5 @@ FROM
         inner join
     champion_eiep1 ON champion_registry.icp = champion_eiep1.icp
 where
-    (reportmonth > '201108') and (pricecode = 'WA07' or pricecode = 'WA06' or pricecode = 'WA026' or pricecode = 'WA027')
-order by icp
+    (reportmonth > '201108') and metercontact= 'NGCS'
+     
