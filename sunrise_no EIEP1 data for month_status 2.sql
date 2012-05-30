@@ -14,7 +14,7 @@ select
     metertypenhh,
     metertypehhr,
     distpricecat,
-    category
+    category,
     icpstatus,
     icpstatusreason
 from
@@ -23,13 +23,13 @@ from
     from
         sunrise_registry
     where
-        sunrise_registry.icpstatus = 2 and sunrise_registry.metertypenhh = 'Y' ) as tmp_reg
+        sunrise_registry.icpstatus = 2  ) as tmp_reg
         left join
     (select 
         sunrise_eiep1.icp
     from
         sunrise_eiep1
     where
-        reportmonth = 201112) as tmp_eiep1 ON tmp_reg.icp = tmp_eiep1.icp inner join  sunrise_registry  on tmp_reg.icp = sunrise_registry.icp
+        reportmonth = 201204) as tmp_eiep1 ON tmp_reg.icp = tmp_eiep1.icp inner join  sunrise_registry  on tmp_reg.icp = sunrise_registry.icp
 where
     tmp_eiep1.icp is NULL
