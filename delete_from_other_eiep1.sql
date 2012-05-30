@@ -1,0 +1,1 @@
+delete from sunrise_eiep1 using sunrise_eiep1 join champion_registry on champion_registry.icp = sunrise_eiep1.icp
