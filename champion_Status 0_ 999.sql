@@ -29,8 +29,8 @@ FROM
     scm.champion_registry
         left join
     champion_eiep1 ON champion_registry.icp = champion_eiep1.icp
-where champion_registry.icpstatus = '0'  or champion_registry.icpstatus = '999'  
-and champion_eiep1.reportmonth is null
+where (champion_registry.icpstatus = '0' and Champion_eiep1.reportmonth is null) 
+or (champion_registry.icpstatus = '999'  and champion_eiep1.reportmonth is null)
 
  
  

@@ -40,7 +40,7 @@ from
 where
  
 
-    fixedvariable = 'V' and champion_registry.category = '2' and icpstatus = '2' and  champion_registry.metertypehhr = 'Y'
+      icpstatus = '2' and  champion_registry.metertypehhr = 'Y'
     group by  icp  
     
  

@@ -30,6 +30,7 @@ from
     from
         sunrise_eiep1
     where
-        reportmonth = 201204) as tmp_eiep1 ON tmp_reg.icp = tmp_eiep1.icp inner join  sunrise_registry  on tmp_reg.icp = sunrise_registry.icp
+
+        reportmonth = 201203) as tmp_eiep1 ON tmp_reg.icp = tmp_eiep1.icp inner join  sunrise_registry  on tmp_reg.icp = sunrise_registry.icp
 where
     tmp_eiep1.icp is NULL

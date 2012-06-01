@@ -30,8 +30,8 @@ concat(format((sum(units*(1-abs(sign(left(reportmonth,4)-2011))))-sum(units*(1-a
 sum(units*(1-abs(sign(left(reportmonth,4)-2012)))) as 'sum 12',
 
     
-champion_registry.retailer as 'REG retailer',distpricecat, metercontact, addressuserref,    addressnumber,   
-addressstreet,    addresstown,        icpstatus,    category,  metertypehhr,  
+champion_registry.retailer as 'current retailer',distpricecat, metercontact, addressuserref,    addressnumber,   
+addressstreet,    addresstown, icpstatus,    category,  metertypehhr,  
 ami,  meterregister  
 
 

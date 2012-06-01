@@ -14,7 +14,7 @@ select
     metertypenhh,
     metertypehhr,
     distpricecat,
-    category
+    category,
     icpstatus,
     icpstatusreason
 from
