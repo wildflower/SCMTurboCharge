@@ -1,1 +1,1 @@
-select reportmonth, count(icp), retailer from sunrise_eiep1 where status = 'UB' group by reportmonth desc, retailer with rollup 
+select reportmonth, count(icp), retailer from sunrise_eiep1 where status = 'UB' group by reportmonth desc, retailer with rollup ;
