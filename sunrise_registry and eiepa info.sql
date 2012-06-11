@@ -8,7 +8,7 @@ FROM
     scm.sunrise_registry
         inner join
     sunrise_eiep1 ON sunrise_registry.icp = sunrise_eiep1.icp
-    where  sunrise_eiep1.icp ='1000001048BP52E'
+    where  sunrise_eiep1.icp ='1000023619BPDE8'
     order by sunrise_eiep1.reportmonth desc
 
     
