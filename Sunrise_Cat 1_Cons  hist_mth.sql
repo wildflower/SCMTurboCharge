@@ -1,7 +1,7 @@
 select 
-sunrise_registry.icp,distpricecat,
+sunrise_registry.icp,distpricecat,category, metertypenhh,
  sunrise_eiep1.retailer,sunrise_registry.retailer as 'current retailer', 
- sunrise_registry.metercontact,
+ sunrise_registry.metercontact, 
 sum(units*(1-abs(sign(left(reportmonth,4)-2008)))) as 'sum yr 08',
 sum(units*(1-abs(sign(left(reportmonth,4)-2009)))) as 'sum yr 09',
 sum(units*(1-abs(sign(left(reportmonth,4)-2010)))) as 'sum yr 10',
@@ -14,6 +14,7 @@ concat(format((sum(units*(1-abs(sign(left(reportmonth,4)-2011))))-sum(units*(1-a
 sum(units*(1-abs(sign(reportmonth-201201)))) as 'Jan12',
 sum(units*(1-abs(sign(reportmonth-201202)))) as 'Feb12',
 sum(units*(1-abs(sign(reportmonth-201203)))) as 'Mar12',
+sum(units*(1-abs(sign(reportmonth-201204)))) as 'Apr12',
 
  
 concat(format((sum(units*(1-abs(sign(reportmonth-201203))))-sum(units*(1-abs(sign(reportmonth-201201)))))/sum(units*(1-abs(sign(reportmonth-201201))))*100,0),'%') as 'Mar-Jan var',
@@ -29,6 +30,7 @@ addressuserref,   category , sunrise_eiep1.retailer,sunrise_registry.retailer as
 from
     sunrise_eiep1
     inner join sunrise_registry on  sunrise_registry.icp = sunrise_eiep1.icp    
-where sunrise_registry.category = '1' 
+where  
+  distpricecat like  'NMD%'
     and  sunrise_eiep1.fixedvariable= 'V'       
     group by icp;
