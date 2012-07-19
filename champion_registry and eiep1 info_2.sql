@@ -8,8 +8,8 @@ FROM
     scm.champion_registry         inner join
     champion_eiep1 ON champion_registry.icp = champion_eiep1.icp
 where
-      
-    champion_eiep1.icp = '0000225224WAAE7' 
+          champion_eiep1.icp= '0007465170WA334'
+ 
      order by champion_eiep1.reportmonth desc
 
      
