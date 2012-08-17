@@ -13,10 +13,10 @@
  
  
  where distpricecat in  ('NMDU','NMDR')
- and sunrise_invoice.reportmonth = '201204'
+ 
  and sunrise_eiep1.fixedvariable= 'V'
   
   
   
- order by icp desc
+ order by icp, reportmonth desc
  
