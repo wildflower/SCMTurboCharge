@@ -2,6 +2,10 @@ select
 unison_registry.icp, 
 distpricecat,
 metertypenhh,
+metertypehhr,
+ icpstatus,     
+category,
+unison_registry.retailer as 'Current Retailer',
 sum(units*(1-abs(sign(left(reportmonth,4)-2006)))) as 'sum yr 06',
 sum(units*(1-abs(sign(left(reportmonth,4)-2007)))) as 'sum yr 07',
 sum(units*(1-abs(sign(left(reportmonth,4)-2008)))) as 'sum yr 08',
@@ -13,6 +17,7 @@ sum(units*(1-abs(sign(left(reportmonth,4)-2012)))) as 'sum yr 12',
 
 concat(format((sum(units*(1-abs(sign(left(reportmonth,4)-2011))))-sum(units*(1-abs(sign(left(reportmonth,4)-2006)))))/sum(units*(1-abs(sign(left(reportmonth,4)-2006))))*100,0),'%') as 'YRs 2011_2006 VAR',
 concat(format((sum(units*(1-abs(sign(left(reportmonth,4)-2011))))-sum(units*(1-abs(sign(left(reportmonth,4)-2008)))))/sum(units*(1-abs(sign(left(reportmonth,4)-2008))))*100,0),'%') as 'YRs 2011_2008 VAR',
+
 concat(format((sum(units*(1-abs(sign(left(reportmonth,4)-2011))))-sum(units*(1-abs(sign(left(reportmonth,4)-2009)))))/sum(units*(1-abs(sign(left(reportmonth,4)-2009))))*100,0),'%') as 'YRs 2011_2009 VAR',
 concat(format((sum(units*(1-abs(sign(left(reportmonth,4)-2011))))-sum(units*(1-abs(sign(left(reportmonth,4)-2010)))))/sum(units*(1-abs(sign(left(reportmonth,4)-2010))))*100,0),'%') as 'YRs 2011_2010 VAR',
 
