@@ -8,6 +8,14 @@ FROM
     scm.unison_registry
         inner join
     unison_eiep1 ON unison_registry.icp = unison_eiep1.icp
-    where  unison_eiep1.icp ='0000800114TU5DF'
+    where  unison_eiep1.icp ='3596361021HBD6F'
+
+
+
+
+
+
+
+and fixedvariable = 'V'
 
     order by unison_eiep1.reportmonth desc
