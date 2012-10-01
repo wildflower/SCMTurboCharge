@@ -2,8 +2,6 @@ select
 sunrise_registry.icp,
  sunrise_eiep1.retailer,sunrise_registry.retailer as 'current retailer',
 
-sum(units*(1-abs(sign(left(reportmonth,4)-2006)))) as 'sum yr 06',
-sum(units*(1-abs(sign(left(reportmonth,4)-2007)))) as 'sum yr 07',
 sum(units*(1-abs(sign(left(reportmonth,4)-2008)))) as 'sum yr 08',
 sum(units*(1-abs(sign(left(reportmonth,4)-2009)))) as 'sum yr 09',
 sum(units*(1-abs(sign(left(reportmonth,4)-2010)))) as 'sum yr 10',
@@ -41,8 +39,18 @@ concat(format((sum(units*(1-abs(sign(reportmonth-201112))))-sum(units*(1-abs(sig
 concat(format((sum(units*(1-abs(sign(reportmonth-201201))))-sum(units*(1-abs(sign(reportmonth-201112)))))/sum(units*(1-abs(sign(reportmonth-201112))))*100,0),'%') as '201102_01 var',
 concat(format((sum(units*(1-abs(sign(reportmonth-201202))))-sum(units*(1-abs(sign(reportmonth-201201)))))/sum(units*(1-abs(sign(reportmonth-201201))))*100,0),'%') as '201201_02 var',
 concat(format((sum(units*(1-abs(sign(reportmonth-201203))))-sum(units*(1-abs(sign(reportmonth-201202)))))/sum(units*(1-abs(sign(reportmonth-201202))))*100,0),'%') as '201202_03 var',
- 
 
+
+sum(units*(1-abs(sign(reportmonth-201107))))as'Jul11',
+sum(units*(1-abs(sign(reportmonth-201108))))as'Aug11',
+sum(units*(1-abs(sign(reportmonth-201109))))as'Sep11',
+sum(units*(1-abs(sign(reportmonth-201110))))as'Oct11',
+sum(units*(1-abs(sign(reportmonth-201111))))as'Nov11',
+sum(units*(1-abs(sign(reportmonth-201112))))as'Dec11',
+sum(units*(1-abs(sign(reportmonth-201201))))as'Jan12',
+sum(units*(1-abs(sign(reportmonth-201202))))as'Feb12',
+sum(units*(1-abs(sign(reportmonth-201203))))as'Mar12',
+sum(units*(1-abs(sign(reportmonth-201204))))as'Apr12',
 addressuserref,    addressnumber,    addressstreet,    addresstown,    icpstatus,    metertypenhh,
     distpricecat,    category , sunrise_eiep1.retailer,sunrise_registry.retailer as 'current retailer'
  
