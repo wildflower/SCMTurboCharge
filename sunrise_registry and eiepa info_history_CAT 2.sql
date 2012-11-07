@@ -25,10 +25,9 @@ where
 sunrise_eiep1.fixedvariable = 'V'
 and category = '2'
 and reportmonth > '200701'
-and sunrise_registry.icp = '1000001195BPE33' 
 
 
-order by reportmonth desc
+order by icp
  
  
   

@@ -1,8 +1,5 @@
 select 
 champion_registry.icp,
-champion_registry.metertypehhr,
-icpstatus,
-
 sum(units*(1-abs(sign(left(reportmonth,4)-2006)))) as 'sum 06',
 sum(units*(1-abs(sign(left(reportmonth,4)-2007)))) as 'sum 07',
 sum(units*(1-abs(sign(left(reportmonth,4)-2008)))) as 'sum 08',
@@ -25,6 +22,6 @@ concat(format((sum(units*(1-abs(sign(left(reportmonth,4)-2011))))-sum(units*(1-a
 from
     champion_eiep1 inner join champion_registry on champion_registry.icp = champion_eiep1.icp
 where
-    fixedvariable = 'V' and champion_registry.category = '2'   
+    fixedvariable = 'V' and champion_registry.category = '2' and icpstatus = '2' and champion_registry.metertypehhr = 'N'
     group by  icp
  
