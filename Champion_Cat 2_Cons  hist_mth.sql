@@ -14,11 +14,14 @@ concat(format((sum(units*(1-abs(sign(left(reportmonth,4)-2011))))-sum(units*(1-a
 sum(units*(1-abs(sign(reportmonth-201201)))) as 'Jan12',
 sum(units*(1-abs(sign(reportmonth-201202)))) as 'Feb12',
 sum(units*(1-abs(sign(reportmonth-201203)))) as 'Mar12',
-
+sum(units*(1-abs(sign(reportmonth-201204)))) as 'Apr12',
+sum(units*(1-abs(sign(reportmonth-201205)))) as 'May12', 
+ 
  
 concat(format((sum(units*(1-abs(sign(reportmonth-201203))))-sum(units*(1-abs(sign(reportmonth-201201)))))/sum(units*(1-abs(sign(reportmonth-201201))))*100,0),'%') as 'Mar-Jan var',
 concat(format((sum(units*(1-abs(sign(reportmonth-201203))))-sum(units*(1-abs(sign(reportmonth-201202)))))/sum(units*(1-abs(sign(reportmonth-201202))))*100,0),'%') as 'Mar-Feb var',
-
+concat(format((sum(units*(1-abs(sign(reportmonth-201204))))-sum(units*(1-abs(sign(reportmonth-201203)))))/sum(units*(1-abs(sign(reportmonth-201203))))*100,0),'%') as 'Apr-Mar var',
+concat(format((sum(units*(1-abs(sign(reportmonth-201205))))-sum(units*(1-abs(sign(reportmonth-201204)))))/sum(units*(1-abs(sign(reportmonth-201204))))*100,0),'%') as 'May-Apr var',
 
 
 
