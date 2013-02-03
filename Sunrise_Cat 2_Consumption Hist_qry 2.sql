@@ -51,5 +51,6 @@ from
     inner join sunrise_registry on  sunrise_registry.icp = sunrise_eiep1.icp
     where sunrise_registry.category = '2' 
     and  sunrise_eiep1.fixedvariable= 'V'
+ 
     
     group by icp;
