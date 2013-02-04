@@ -22,6 +22,6 @@ concat(format((sum(units*(1-abs(sign(left(reportmonth,4)-2011))))-sum(units*(1-a
 from
     champion_eiep1 inner join champion_registry on champion_registry.icp = champion_eiep1.icp
 where
-    fixedvariable = 'V' and champion_registry.category = '2' and icpstatus = '2' and champion_registry.metertypehhr = 'N'
+    fixedvariable = 'V' and champion_registry.category = '2' and icpstatus = '2'  
     group by  icp
  

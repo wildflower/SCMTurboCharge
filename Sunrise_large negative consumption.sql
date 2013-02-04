@@ -7,7 +7,7 @@ FROM
     scm.sunrise_registry
         inner join
     sunrise_eiep1 ON sunrise_registry.icp = sunrise_eiep1.icp
-    where   sunrise_eiep1.units < '-1000'
+    where   sunrise_eiep1.units < '-100000'
 
 
     order by sunrise_eiep1.reportmonth desc
