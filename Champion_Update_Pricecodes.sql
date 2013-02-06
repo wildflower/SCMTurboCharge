@@ -90,10 +90,10 @@ update champion_eiep1 set pricecode = 'WA26' where pricecode like '349B400';
 update champion_eiep1 set pricecode = 'WA27' where pricecode like '349B500';
 update champion_eiep1 set pricecode = 'WA26' where pricecode like '3492400';
 update champion_eiep1 set pricecode = 'WA27' where pricecode like '3492500';
-
-
-
- 
+update champion_eiep1 set pricecode = 'WA06' where pricecode like '16';
+update champion_eiep1 set pricecode = 'WA07' where pricecode like '17';
+update champion_eiep1 set pricecode = 'WA22' where pricecode like '3492100';
+update champion_eiep1 set pricecode = 'WA23' where pricecode like '3492200';
 
  
 

@@ -1,6 +1,7 @@
 SELECT 
     champion_registry.icp,    
     champion_eiep1.reportmonth,
+    meterregister,
     champion_eiep1.units,
     champion_eiep1.status,
     champion_eiep1.retailer,    

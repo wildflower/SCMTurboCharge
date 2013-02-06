@@ -17,7 +17,7 @@ SELECT
     addressstreet,
     addresstown,
     icpstatus,
-    metertypenhh,
+    metertypenhh,champion_registrychampion_registry
     category      
     
     
@@ -25,7 +25,7 @@ FROM
     scm.champion_registry   inner join
     champion_eiep1 ON champion_registry.icp = champion_eiep1.icp
 where
-    reportmonth > '201111' and (pricecode = 'WA02' or pricecode = 'WA03' or pricecode = 'WA05' or pricecode = 'WA01' or pricecode = 'WA06' or pricecode = 'WA001'
+    reportmonth > '201203' and (pricecode = 'WA02' or pricecode = 'WA03' or pricecode = 'WA05' or pricecode = 'WA01' or pricecode = 'WA06' or pricecode = 'WA001'
     or pricecode = 'WA07' or pricecode = 'WA001' or pricecode= '12' or pricecode = '13' or pricecode = 'WA0010') and distpricecat = 'N'  
    
    order by champion_registry.icp
