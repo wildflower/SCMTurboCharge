@@ -27,7 +27,7 @@ ami,  meterregister
 from
     sunrise_eiep1 inner join sunrise_registry on sunrise_registry.icp = sunrise_eiep1.icp
 where
-    fixedvariable = 'V' and sunrise_registry.category = '2' and icpstatus = '2' and  sunrise_registry.metertypehhr = 'N'
+    fixedvariable = 'V' and sunrise_registry.category = '2' and icpstatus = '2'  
     group by  icp  
     
  

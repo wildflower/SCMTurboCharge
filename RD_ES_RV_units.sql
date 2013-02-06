@@ -153,5 +153,6 @@ from
         inner join
     champion_registry ON champion_registry.icp = champion_eiep1.icp
 where
-    champion_registry.icpstatus = 2
+    champion_registry.category> '1'
+    and champion_registry.icp= '0000151835WA688'
 group by icp
