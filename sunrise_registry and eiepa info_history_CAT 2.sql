@@ -10,8 +10,10 @@ SELECT
     ami,
     meterregister,
     distpricecat,
+	enddate,
     sunrise_eiep1.reportmonth,
-    sunrise_eiep1.units,    
+    sunrise_eiep1.units, 
+  sunrise_eiep1.chargeabledays,
     sunrise_eiep1.status,
     sunrise_eiep1.retailer,
     sunrise_eiep1.pricecode,
@@ -22,12 +24,14 @@ FROM
     scm.sunrise_registry
 inner join sunrise_eiep1 on sunrise_registry.icp = sunrise_eiep1.icp
 where     
-sunrise_eiep1.fixedvariable = 'V'
-and category = '2'
+ 
+ category = '2'
 and reportmonth > '200701'
+and sunrise_eiep1.icp = '1000015752BPC71'
+order by sunrise_eiep1.reportmonth desc
 
 
-order by icp
+ 
  
  
   

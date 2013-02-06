@@ -17,7 +17,7 @@ SELECT
     addressstreet,
     addresstown,
     icpstatus,
-    metertypenhh,
+    metertypenhh,champion_registrychampion_registry
     category      
     
     
