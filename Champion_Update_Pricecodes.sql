@@ -100,3 +100,14 @@ update champion_eiep1 set pricecode = 'D' where pricecode like 'DOM';
 update champion_eiep1 set pricecode = 'N' where pricecode like 'NON-DOM'; 
 update champion_eiep1 set pricecode = 'WA22' where pricecode like '31'; 
 update champion_eiep1 set pricecode = 'WA23' where pricecode like '32'; 
+update champion_eiep1 set pricecode = 'WA01' where pricecode like '11'; 
+update champion_eiep1 set pricecode = 'WA02' where pricecode like '12'; 
+update champion_eiep1 set pricecode = 'WA03' where pricecode like '13'; 
+update champion_eiep1 set pricecode = 'WA05' where pricecode like '15'; 
+update champion_eiep1 set pricecode = 'WA26' where pricecode like '35'; 
+update champion_eiep1 set pricecode = 'WA27' where pricecode like '36'; 
+update champion_eiep1 set pricecode = 'WA25' where pricecode like '34'; 
+update champion_eiep1 set pricecode = 'WA07' where pricecode like '17'; 
+update champion_eiep1 set pricecode = 'WA06' where pricecode like '16'; 
+
+

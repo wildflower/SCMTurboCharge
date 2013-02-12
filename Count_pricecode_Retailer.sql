@@ -3,7 +3,8 @@
 
 select pricecode,fixedvariable,
 count(pricecode)
-as count from scm.sunrise_eiep1
-where reportmonth = '201112' 
-and retailer = 'PUNZ'
+as count 
+from  champion_eiep1
+where reportmonth = '201204' 
+ 
 group by pricecode order by count
